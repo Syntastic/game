@@ -1,0 +1,45 @@
+:host {
+  display: flex;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  font-size: 48pt;
+}
+
+.overlay {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  display: grid;
+  grid-template-rows: 200px 200px auto;
+  grid-template-columns: 300px auto 300px;
+  grid-template-areas: ". title timer" ". year ." ". . points";
+}
+
+.title {
+  grid-area: title;
+  align-self: center;
+  justify-self: center;
+}
+
+.year {
+  grid-area: year;
+  align-self: center;
+  justify-self: center;
+}
+
+.game-data {
+  font-size: 96pt;
+  justify-self: center;
+}
+
+.timer {
+  grid-area: timer;
+  align-self: center;
+}
+
+.points {
+  grid-area: points;
+  align-self: end;
+  padding-bottom: 50px;
+}

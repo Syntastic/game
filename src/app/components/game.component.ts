@@ -11,10 +11,8 @@ export class GameComponent {
 
   public constructor(private router: Router, private route: ActivatedRoute) {}
 
-  // public;
   public start(): void {
     this.started = true;
-
     this.router.navigate(['1'], { relativeTo: this.route });
   }
 }
