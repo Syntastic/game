@@ -1,23 +1,3 @@
-fueurschawnz - Gimme Gimme Gimme
-Children of Bodom - oops i did it again
-ensiferum - bamboleo
-vision divine - take on me
-megadeth - these boots
-distrubed - land of confusion
-alestorm - in the navy
-rising insane - maniac
-five finger death punch - house of rising sun
-
-punk
-goldfinger - 99 red balloons
-dead kennedys - viva las vegas
-nofx - go your own way
-lagwagon - bad moon rising
-lagwagon - brown eyed girl
-mxpx - take on me
-social distortion - ring of fire
-lagwagon - no one like you
-
 rising insane maniacc https://www.youtube.com/watch?v=ToPYG-8XuBI&ab_channel=LongBranchRecords
 
 leo what is love https://www.youtube.com/watch?v=DKo9ok2829M&ab_channel=FrogLeapStudios
@@ -26,9 +6,14 @@ leo take on me https://www.youtube.com/watch?v=NBiQPZxd81s&ab_channel=FrogLeapSt
 leo house of rising sun https://www.youtube.com/watch?v=cLwwRVjEDGU&ab_channel=FrogLeapStudios
 feuer gimme gimme gimme https://www.youtube.com/watch?v=KEl5Gi9l528&ab_channel=NapalmRecords
 
+basket case https://www.youtube.com/watch?v=04mbXG-7B4U
+gansta paradise https://www.youtube.com/watch?v=EXuslEZsrc4
+let it go https://www.youtube.com/watch?v=HNTwSNOqd4U
+
+barbie girl (possible example song) https://www.youtube.com/watch?v=MHxKm15fDHg
+
 leo ghostbusters https://www.youtube.com/watch?v=hF39e_hnFb8&ab_channel=FrogLeapStudios
 feuer dragostea din tei https://www.youtube.com/watch?v=qHhWelSBppY&ab_channel=NapalmRecords
-basket case https://www.youtube.com/watch?v=04mbXG-7B4U
 
 leo feel good https://www.youtube.com/watch?v=yNENVZFHutQ
 
@@ -36,13 +21,7 @@ cotton eyed joe https://www.youtube.com/watch?v=QG6n-TQypPY
 
 rock you like a hurricane https://www.youtube.com/watch?v=tQkqdkwFmcc
 
-gansta paradise https://www.youtube.com/watch?v=EXuslEZsrc4
-
-let it go https://www.youtube.com/watch?v=HNTwSNOqd4U
-
 toxic https://www.youtube.com/watch?v=h1gYgUF2uYI
-
-barbie girl (possible example song) https://www.youtube.com/watch?v=MHxKm15fDHg
 
 https://www.youtube.com/watch?v=LzpmKoqRXFc&ab_channel=FrogLeapStudios
 https://www.youtube.com/watch?v=yVmOPHsVM3U&ab_channel=FrogLeapStudios

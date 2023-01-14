@@ -13,6 +13,6 @@ export class GameComponent {
 
   public start(): void {
     this.started = true;
-    this.router.navigate(['1'], { relativeTo: this.route });
+    this.router.navigate(['list']);
   }
 }

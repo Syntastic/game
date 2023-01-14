@@ -11,6 +11,7 @@ import * as components from './components';
     components.GameComponent,
     components.SongComponent,
     components.VideoPlayerComponent,
+    components.SongListComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
