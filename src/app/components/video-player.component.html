@@ -1,8 +1,1 @@
-<video
-  id="1"
-  [src]="url$ | async"
-  muted
-  autoplay
-  (ended)="ended.emit()"
-  #video
-></video>
+<video [src]="url" muted autoplay (ended)="ended.emit()" #video></video>

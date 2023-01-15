@@ -1,6 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { GameComponent, SongComponent, SongListComponent } from './components';
+import {
+  GameComponent,
+  SongComponent,
+  SongListComponent,
+  SongVideoComponent,
+} from './components';
 import { SongGuard } from './services';
 
 const routes: Routes = [
@@ -12,7 +17,12 @@ const routes: Routes = [
     path: 'list',
     component: SongListComponent,
   },
-  { path: 'song/:id', component: SongComponent, canActivate: [SongGuard] },
+  {
+    path: 'song/:name',
+    component: SongComponent,
+    canActivate: [SongGuard],
+    children: [{ path: ':id', component: SongVideoComponent }],
+  },
   { path: '**', redirectTo: 'game' },
 ];
 

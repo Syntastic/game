@@ -12,6 +12,7 @@ import * as components from './components';
     components.SongComponent,
     components.VideoPlayerComponent,
     components.SongListComponent,
+    components.SongVideoComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],

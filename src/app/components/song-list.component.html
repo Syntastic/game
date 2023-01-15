@@ -3,5 +3,5 @@
   *ngFor="let song of songs"
   [routerLink]="['..', 'song', song.id]"
 >
-  {{ song.name }}
+  #{{ song.id }} - {{ song.year }}
 </div>

@@ -1,16 +1,16 @@
 <ng-container *ngIf="song$ | async as song">
-  <app-video-player
-    *ngIf="startSong$ | async"
-    [url]="song.active"
-    (ended)="onVideoEnded(song)"
-  ></app-video-player>
-  <div class="overlay">
-    <ng-container *ngIf="!(startSong$ | async)">
-      <div class="title">Song #{{ song.id }}</div>
-      <div class="year">{{ song.year }}</div>
-    </ng-container>
+  <div class="container" *ngIf="!videoPlaying">
+    <div class="title">Song #{{ song.id }}</div>
+    <div>{{ song.year }}</div>
 
-    <div class="timer game-data">{{ time }}</div>
-    <div class="points game-data">{{ points }}</div>
+    <div class="video first" [routerLink]="'1'" (click)="videoStart()">
+      Hard
+    </div>
+    <div class="video" [routerLink]="'2'" (click)="videoStart()">Medium</div>
+    <div class="video last" [routerLink]="'3'" (click)="videoStart()">Easy</div>
   </div>
+  <router-outlet
+    *ngIf="videoPlaying"
+    (deactivate)="onSongEnded()"
+  ></router-outlet>
 </ng-container>

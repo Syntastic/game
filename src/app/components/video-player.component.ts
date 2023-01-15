@@ -24,7 +24,6 @@ export class VideoPlayerComponent implements OnInit, OnChanges {
 
   public ngOnChanges(changes: SimpleChanges): void {
     if (changes.url) {
-      console.log(this.url);
       this.url$.next(this.url);
     }
   }

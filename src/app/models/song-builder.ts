@@ -7,8 +7,8 @@ export class SongBuilder {
   private coverArtist: string;
   private fileName: string;
   private url: string;
-  private firstInterval: number;
-  private secondInterval: number;
+  private originalUrl: string;
+
   constructor(private id: string) {}
 
   public withName(name: string): SongBuilder {
@@ -41,13 +41,8 @@ export class SongBuilder {
     return this;
   }
 
-  public withFirstInterval(interval: number): SongBuilder {
-    this.firstInterval = interval;
-    return this;
-  }
-
-  public withSecondInterval(interval: number): SongBuilder {
-    this.secondInterval = interval;
+  public withOriginalVideoUrl(url: string): SongBuilder {
+    this.originalUrl = url;
     return this;
   }
 
@@ -60,8 +55,7 @@ export class SongBuilder {
       this.year,
       this.coverArtist,
       this.url,
-      this.firstInterval,
-      this.secondInterval
+      this.originalUrl
     );
   }
 }
