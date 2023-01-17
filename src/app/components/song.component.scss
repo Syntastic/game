@@ -11,6 +11,14 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  flex: 1;
+}
+
+.song-id {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: auto;
 }
 
 .title {
@@ -19,7 +27,7 @@
 
 .video {
   margin: 10px;
-  border: 3px solid #cccccc;
+  border: 5px solid #cccccc;
   padding: 10px 0;
   width: 300px;
   text-align: center;
@@ -36,4 +44,28 @@
 
 .last {
   margin-bottom: 200px;
+}
+
+.complete {
+  width: 100%;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.played {
+  border-color: green;
+}
+
+.name {
+  font-size: 60pt;
+}
+
+.by {
+  font-size: 36pt;
+}
+
+.artist {
+  margin-bottom: 50px;
 }

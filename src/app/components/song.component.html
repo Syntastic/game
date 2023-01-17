@@ -1,16 +1,46 @@
-<ng-container *ngIf="song$ | async as song">
-  <div class="container" *ngIf="!videoPlaying">
+<div class="container" *ngIf="!videoPlaying">
+  <div class="song-id">
     <div class="title">Song #{{ song.id }}</div>
     <div>{{ song.year }}</div>
+  </div>
 
-    <div class="video first" [routerLink]="'1'" (click)="videoStart()">
+  <ng-container *ngIf="!complete">
+    <div
+      class="video first"
+      [ngClass]="{ played: hard }"
+      [routerLink]="'1'"
+      (click)="videoStart(1)"
+    >
       Hard
     </div>
-    <div class="video" [routerLink]="'2'" (click)="videoStart()">Medium</div>
-    <div class="video last" [routerLink]="'3'" (click)="videoStart()">Easy</div>
+    <div
+      class="video"
+      [ngClass]="{ played: medium }"
+      [routerLink]="'2'"
+      (click)="videoStart(2)"
+    >
+      Medium
+    </div>
+    <div
+      class="video last"
+      [ngClass]="{ played: easy }"
+      [routerLink]="'3'"
+      (click)="videoStart(3)"
+    >
+      Easy
+    </div>
+  </ng-container>
+  <div *ngIf="complete" class="complete">
+    <div class="name">{{ song.name }}</div>
+    <div class="by">by</div>
+    <div class="artist">{{ song.artist }}</div>
+    <div class="by">covered by</div>
+    <div class="artist">{{ song.coverArtist }}</div>
+
+    <div class="video" (click)="next()">NEXT</div>
   </div>
-  <router-outlet
-    *ngIf="videoPlaying"
-    (deactivate)="onSongEnded()"
-  ></router-outlet>
-</ng-container>
+</div>
+<router-outlet
+  *ngIf="videoPlaying"
+  (deactivate)="onSongEnded()"
+></router-outlet>

@@ -12,6 +12,11 @@ export class SongProvider {
     return this.songs.find((x) => x.id === id);
   }
 
+  public getNextRoute(id: string): string {
+    const i = parseInt(id);
+    return i === this.songs.length ? 'game' : `..//${i + 1}`;
+  }
+
   private maniac = new SongBuilder('1')
     .withName('Maniac')
     .fromArtist('Michael Sembello')

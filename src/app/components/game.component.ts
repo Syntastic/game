@@ -12,7 +12,6 @@ export class GameComponent {
   public constructor(private router: Router, private route: ActivatedRoute) {}
 
   public start(): void {
-    this.started = true;
     this.router.navigate(['list']);
   }
 }
