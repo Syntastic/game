@@ -5,7 +5,6 @@ import { map, Observable, withLatestFrom } from 'rxjs';
 import { SongProvider } from '../services/song.provider';
 
 @Component({
-  selector: 'app-song-video',
   templateUrl: './song-video.component.html',
 })
 export class SongVideoComponent implements OnInit {

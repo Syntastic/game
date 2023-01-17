@@ -6,7 +6,6 @@ import { Level, Song } from '../models';
 import { SongProvider } from '../services';
 
 @Component({
-  selector: 'app-song',
   styleUrls: ['./song.component.scss'],
   templateUrl: './song.component.html',
 })

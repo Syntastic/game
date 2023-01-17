@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
-  selector: 'app-game',
   styleUrls: ['./game.component.scss'],
   templateUrl: './game.component.html',
 })
