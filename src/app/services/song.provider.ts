@@ -17,7 +17,7 @@ export class SongProvider {
     return i === this.songs.length ? 'game' : `..//${i + 1}`;
   }
 
-  private maniac = new SongBuilder('1')
+  private maniac = new SongBuilder('4')
     .withName('Maniac')
     .fromArtist('Michael Sembello')
     .fromYear(1983)
@@ -47,7 +47,7 @@ export class SongProvider {
     .withOriginalVideoUrl('https://www.youtube.com/watch?v=XEjLoHdbVeE')
     .build();
 
-  private blindingLights = new SongBuilder('4')
+  private blindingLights = new SongBuilder('1')
     .withName('Blinding Lights')
     .fromArtist('The Weeknd')
     .fromYear(2019)
@@ -78,10 +78,10 @@ export class SongProvider {
     .build();
 
   private songs = [
-    this.maniac,
+    this.blindingLights,
     this.whatIsLove,
     this.gimme,
-    this.blindingLights,
+    this.maniac,
     this.houseRisingSun,
     this.takeOnMe,
   ];

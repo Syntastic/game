@@ -31,11 +31,11 @@
     </div>
   </ng-container>
   <div *ngIf="complete" class="complete">
-    <div class="name">{{ song.name }}</div>
-    <div class="by">by</div>
-    <div class="artist">{{ song.artist }}</div>
-    <div class="by">covered by</div>
-    <div class="artist">{{ song.coverArtist }}</div>
+    <app-answer
+      [name]="song.name"
+      [artist]="song.artist"
+      [coverArtist]="song.coverArtist"
+    ></app-answer>
 
     <div class="video" (click)="next()">NEXT</div>
   </div>

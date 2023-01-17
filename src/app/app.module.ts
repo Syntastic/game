@@ -13,6 +13,7 @@ import * as components from './components';
     components.VideoPlayerComponent,
     components.SongListComponent,
     components.SongVideoComponent,
+    components.AnswerComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
