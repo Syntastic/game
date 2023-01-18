@@ -4,5 +4,7 @@ export { GameComponent } from './game.component';
 export { SongListComponent } from './song-list.component';
 export { SongVideoComponent } from './song-video.component';
 export { AnswerComponent } from './answer.component';
-export { ScoringComponent } from './scoring.component';
+export { ScoringPageComponent } from './scoring-page.component';
 export { GridComponent } from './grid-component';
+export { ScoreEditorComponent } from './score-editor.component';
+export { LabeledCheckboxComponent } from './labeled-checkbox.component';

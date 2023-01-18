@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import {
   GameComponent,
-  ScoringComponent,
+  ScoringPageComponent,
   SongComponent,
   SongListComponent,
   SongVideoComponent,
@@ -24,7 +24,7 @@ const routes: Routes = [
     canActivate: [SongGuard],
     children: [{ path: ':id', component: SongVideoComponent }],
   },
-  { path: 'scoring', component: ScoringComponent },
+  { path: 'scoring', component: ScoringPageComponent },
   { path: '**', redirectTo: 'game' },
 ];
 
