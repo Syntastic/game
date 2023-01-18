@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { AgGridModule } from 'ag-grid-angular';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -14,8 +15,10 @@ import * as components from './components';
     components.SongListComponent,
     components.SongVideoComponent,
     components.AnswerComponent,
+    components.GridComponent,
+    components.ScoringComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, AppRoutingModule, AgGridModule],
   providers: [],
   bootstrap: [AppComponent],
 })
