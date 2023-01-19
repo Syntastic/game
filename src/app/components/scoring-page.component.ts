@@ -1,9 +1,6 @@
 import { Component } from '@angular/core';
-import { ColDef, ValueGetterParams } from 'ag-grid-community';
-import { Level, Score } from '../models';
-import { Player } from '../models/player';
+import { Score } from '../models';
 import { PlayerStateService } from '../services';
-import { songs } from '../services/song.provider';
 
 @Component({
   selector: 'app-scoring-page',

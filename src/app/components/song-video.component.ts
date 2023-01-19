@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { map, Observable, withLatestFrom } from 'rxjs';
 
@@ -24,13 +24,18 @@ export class SongVideoComponent implements OnInit {
     this.url$ = this.route.paramMap.pipe(
       map((paramMap) => paramMap.get('id')),
       withLatestFrom(songId$),
-      map(([video, songId]) =>
-        this.songProvider.getSong(songId).getVideo(video)
-      )
+      map(([video, songId]) => {
+        const s = this.songProvider.getSong(songId);
+
+        return `${prefix}${s.fileName}-${video}.mp4`;
+      })
     );
   }
 
+  @HostListener('window:keydown.esc')
   public onVideoEnded(): void {
     this.router.navigate(['..'], { relativeTo: this.route });
   }
 }
+
+const prefix = 'assets/';

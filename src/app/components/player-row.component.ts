@@ -1,7 +1,7 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Score } from '../models';
 import { Player } from '../models/player';
-import { songs } from '../services/song.provider';
+import { SongProvider } from '../services/song.provider';
 
 @Component({
   selector: 'app-player-row',
@@ -14,5 +14,7 @@ export class PlayerRowComponent {
   @Input() public showActive: boolean;
   @Output() public scoreChanged = new EventEmitter<[number, Score]>();
 
-  public songIds = songs.map((x) => x.id);
+  public songIds = this.songProvider.songList.map((x) => x.id);
+
+  public constructor(private songProvider: SongProvider) {}
 }

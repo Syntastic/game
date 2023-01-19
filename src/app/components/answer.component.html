@@ -1,5 +1,11 @@
-<div class="name">{{ name }}</div>
-<div class="by">by</div>
-<div class="artist">{{ artist }}</div>
-<div class="by">covered by</div>
-<div class="artist">{{ coverArtist }}</div>
+<div class="container" (click)="onClick()">
+  <ng-container *ngIf="show1">
+    <div class="name">{{ name }}</div>
+    <div class="by">by</div>
+    <div class="artist">{{ artist }}</div>
+  </ng-container>
+  <ng-container>
+    <div class="by">covered by</div>
+    <div class="artist" (click)="ready.emit()">{{ coverArtist }}</div>
+  </ng-container>
+</div>

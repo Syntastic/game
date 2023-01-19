@@ -1,5 +1,3 @@
-const prefix = 'assets/';
-
 export class Song {
   public constructor(
     public id: string,
@@ -11,8 +9,4 @@ export class Song {
     public videoUrl: string,
     public originalUrl: string
   ) {}
-
-  public getVideo(video: string): string {
-    return `${prefix}${this.fileName}-${video}.mp4`;
-  }
 }

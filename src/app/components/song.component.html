@@ -35,9 +35,10 @@
       [name]="song.name"
       [artist]="song.artist"
       [coverArtist]="song.coverArtist"
+      (ready)="next = true"
     ></app-answer>
 
-    <div class="video" (click)="next()">NEXT</div>
+    <div *ngIf="next" class="video" (click)="goToNext()">NEXT</div>
   </div>
 </div>
 <router-outlet

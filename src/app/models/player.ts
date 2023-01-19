@@ -1,11 +1,12 @@
 import { songs } from '../services/song.provider';
-import { Level, Score } from './score';
+import { Score } from './score';
 
 const scoreMap = {
   [1]: 30,
   [2]: 15,
   [3]: 5,
 };
+
 export class Player {
   public metalhead: boolean;
   public scores: Score[];
@@ -14,7 +15,6 @@ export class Player {
   public get totalScore(): number {
     return this.scores.reduce<number>((acc, s) => {
       const score = isNaN(scoreMap[s.level]) ? 0 : scoreMap[s.level];
-      console.log(score);
       return acc + score;
     }, 0);
   }

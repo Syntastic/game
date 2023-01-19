@@ -2,7 +2,7 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { ColDef } from 'ag-grid-community';
 import { Score } from '../models';
 import { Player } from '../models/player';
-import { songs } from '../services/song.provider';
+import { SongProvider } from '../services/song.provider';
 
 @Component({
   selector: 'app-grid',
@@ -17,6 +17,7 @@ export class GridComponent implements OnInit {
 
   public colDefs: ColDef[];
 
+  public constructor(private songProvider: SongProvider) {}
   public ngOnInit(): void {
     this.colDefs = [
       { headerName: 'Name', width: 100 },
@@ -26,7 +27,7 @@ export class GridComponent implements OnInit {
   }
 
   public scoreColumns = [
-    ...songs.map((x) => {
+    ...this.songProvider.songList.map((x) => {
       return {
         headerName: `Song #${x.id}`,
         width: 150,

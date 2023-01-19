@@ -4,17 +4,14 @@ import { SongBuilder } from '../models/song-builder';
 
 @Injectable({ providedIn: 'root' })
 export class SongProvider {
-  public getSongs(): Song[] {
-    return songs;
+  public songList: Song[];
+
+  public constructor() {
+    this.songList = songs.map((x, i) => ({ ...x, id: (i + 1).toString() }));
   }
 
   public getSong(id: string): Song {
-    return songs.find((x) => x.id === id);
-  }
-
-  public getNextRoute(id: string): string {
-    const i = parseInt(id);
-    return i === songs.length ? 'game' : `..//${i + 1}`;
+    return this.songList.find((x) => x.id === id);
   }
 }
 
@@ -42,7 +39,7 @@ const gimme = new SongBuilder('3')
   .withName('Gimme! Gimme! Gimme!')
   .fromArtist('ABBA')
   .fromYear(1979)
-  .fromCoverArtist('Feuerschwanz ')
+  .fromCoverArtist('Feuerschwanz')
   .withFileName('gimme_gimme_gimme')
   .withVideoUrl('https://www.youtube.com/watch?v=KEl5Gi9l528')
   .withOriginalVideoUrl('https://www.youtube.com/watch?v=XEjLoHdbVeE')
@@ -78,11 +75,55 @@ const takeOnMe = new SongBuilder('6')
   .withOriginalVideoUrl('https://www.youtube.com/watch?v=djV11Xbc914')
   .build();
 
+const basketCase = new SongBuilder('7')
+  .withName('Basket Case')
+  .fromArtist('Green Day')
+  .fromYear(1994)
+  .fromCoverArtist('Tommy Johansson')
+  .withFileName('basket_case')
+  .withVideoUrl('https://www.youtube.com/watch?v=04mbXG-7B4U')
+  .withOriginalVideoUrl('https://www.youtube.com/watch?v=NUTGr5t3MoY')
+  .build();
+
+const numa = new SongBuilder('8')
+  .withName('Dragostea Din Tei')
+  .fromArtist('O-Zone')
+  .fromYear(2003)
+  .fromCoverArtist('Feuerschwanz')
+  .withFileName('dragostea_din_tei')
+  .withVideoUrl('https://www.youtube.com/watch?v=qHhWelSBppY')
+  .withOriginalVideoUrl('https://www.youtube.com/watch?v=YnopHCL1Jk8')
+  .build();
+
+const iwantitthatway = new SongBuilder('9')
+  .withName('I Want It That Way')
+  .fromArtist('Backstreet Boys')
+  .fromYear(1999)
+  .fromCoverArtist('UMC feat. From Fall To Spring')
+  .withFileName('i_want_it_that_way')
+  .withVideoUrl('https://www.youtube.com/watch?v=qHhWelSBppY')
+  .withOriginalVideoUrl('https://www.youtube.com/watch?v=YnopHCL1Jk8')
+  .build();
+
+const myheartwillgoon = new SongBuilder('10')
+  .withName('My Heart Will Go On')
+  .fromArtist('Celine Dion')
+  .fromYear(2007)
+  .fromCoverArtist('Dragonforce')
+  .withFileName('my_heart_will_go_on')
+  .withVideoUrl('https://www.youtube.com/watch?v=LHMB1KtLLyI')
+  .withOriginalVideoUrl('https://www.youtube.com/watch?v=3gK_2XdjOdY')
+  .build();
+
 export const songs = [
+  takeOnMe,
+  gimme,
+  myheartwillgoon,
   blindingLights,
   whatIsLove,
-  gimme,
+  iwantitthatway,
+  basketCase,
+  numa,
   maniac,
   houseRisingSun,
-  takeOnMe,
 ];

@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, map, Observable } from 'rxjs';
-import { Level, Score } from '../models';
+import { BehaviorSubject, Observable } from 'rxjs';
+import { Score } from '../models';
 import { Player } from '../models/player';
 import { players } from '../models/players';
 
@@ -17,8 +17,6 @@ export class PlayerStateService {
         return new Player(p.id, p.name);
       })
     );
-
-    this.state$.subscribe((x) => console.log(x));
   }
 
   public getPlayers(): Player[] {

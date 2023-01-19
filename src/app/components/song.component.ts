@@ -12,6 +12,7 @@ import { SongProvider } from '../services';
 export class SongComponent implements OnInit {
   public videoPlaying: boolean;
   public complete: boolean;
+  public next: boolean;
 
   public hard: boolean;
   public medium: boolean;
@@ -63,10 +64,10 @@ export class SongComponent implements OnInit {
     this.videoPlaying = false;
   }
 
-  public next(): void {
+  public goToNext(): void {
     this.songId$.pipe(take(1)).subscribe((id) => {
       const i = parseInt(id);
-      if (i === this.songProvider.getSongs().length) {
+      if (i === this.songProvider.songList.length) {
         this.router.navigate(['scoring']);
       } else {
         this.router.navigate(['..', i + 1], {

@@ -7,7 +7,7 @@ import { SongProvider } from '../services/song.provider';
   templateUrl: './song-list.component.html',
 })
 export class SongListComponent {
-  public songs = this.songProvider.getSongs();
+  public songs = this.songProvider.songList;
 
   public constructor(private songProvider: SongProvider) {}
 }
