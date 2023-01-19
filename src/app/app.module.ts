@@ -21,6 +21,7 @@ import * as components from './components';
     components.CheckboxComponent,
     components.PlayerRowComponent,
     components.RoutingTabsComponent,
+    components.LinksComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, AgGridModule],
   providers: [],

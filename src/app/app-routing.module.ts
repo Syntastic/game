@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import {
   GameComponent,
+  LinksComponent,
   ScoringPageComponent,
   SongComponent,
   SongListComponent,
@@ -25,6 +26,7 @@ const routes: Routes = [
     children: [{ path: ':id', component: SongVideoComponent }],
   },
   { path: 'scoring', component: ScoringPageComponent },
+  { path: 'links', component: LinksComponent },
   { path: '**', redirectTo: 'game' },
 ];
 

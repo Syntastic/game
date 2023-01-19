@@ -1,0 +1,5 @@
+<div *ngFor="let song of songs" class="song">
+  <div class="name">{{ song.name }}</div>
+  <div class="cover" (click)="onClick(song.videoUrl)">Cover Video</div>
+  <div class="original" (click)="onClick(song.originalUrl)">Original Video</div>
+</div>

@@ -10,3 +10,4 @@ export { ScoreEditorComponent } from './score-editor.component';
 export { CheckboxComponent } from './checkbox.component';
 export { PlayerRowComponent } from './player-row.component';
 export { RoutingTabsComponent } from './routing.tabs.component';
+export { LinksComponent } from './links.component';
