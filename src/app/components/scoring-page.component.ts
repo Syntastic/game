@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { map } from 'rxjs';
 import { Score } from '../models';
 import { PlayerStateService } from '../services';
 
@@ -8,7 +9,9 @@ import { PlayerStateService } from '../services';
   templateUrl: './scoring-page.component.html',
 })
 export class ScoringPageComponent {
-  public rows$ = this.playerStateService.players$;
+  public rows$ = this.playerStateService.players$.pipe(
+    map((players) => players.sort((a, b) => a.totalScore - b.totalScore))
+  );
 
   public constructor(private playerStateService: PlayerStateService) {}
 
