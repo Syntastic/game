@@ -20,6 +20,7 @@ import * as components from './components';
     components.ScoreEditorComponent,
     components.CheckboxComponent,
     components.PlayerRowComponent,
+    components.RoutingTabsComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, AgGridModule],
   providers: [],
