@@ -1,0 +1,23 @@
+.box {
+  height: 30px;
+  width: 30px;
+  border: 1px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.box:hover {
+  cursor: pointer;
+}
+
+.checkmark {
+  border: solid #ccc;
+  border-width: 0 3px 3px 0;
+  height: 60%;
+  width: 25%;
+  margin-bottom: 20%;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+}

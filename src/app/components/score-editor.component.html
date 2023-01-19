@@ -1,1 +1,15 @@
-<div class="container"></div>
+<app-checkbox
+  [color]="'red'"
+  [checked]="score.level === 1"
+  (click)="onHardClick()"
+></app-checkbox>
+<app-checkbox
+  [color]="'yellow'"
+  [checked]="score.level === 2"
+  (click)="onMediumClick()"
+></app-checkbox>
+<app-checkbox
+  [color]="'green'"
+  [checked]="score.level === 3"
+  (click)="onEasyClick()"
+></app-checkbox>

@@ -7,4 +7,5 @@ export { AnswerComponent } from './answer.component';
 export { ScoringPageComponent } from './scoring-page.component';
 export { GridComponent } from './grid-component';
 export { ScoreEditorComponent } from './score-editor.component';
-export { LabeledCheckboxComponent } from './labeled-checkbox.component';
+export { CheckboxComponent } from './checkbox.component';
+export { PlayerRowComponent } from './player-row.component';

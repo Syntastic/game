@@ -1,0 +1,9 @@
+<div class="name">{{ player.name }}</div>
+<ng-container *ngIf="showScores">
+  <app-score-editor
+    *ngFor="let score of player.scores"
+    [score]="score"
+    (scoreChanged)="scoreChanged.emit([player.id, $event])"
+  ></app-score-editor>
+  <div class="total">{{ player.totalScore }}</div>
+</ng-container>

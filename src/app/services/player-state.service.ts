@@ -1,11 +1,25 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
-import { Level } from '../models';
+import { BehaviorSubject, map, Observable } from 'rxjs';
+import { Level, Score } from '../models';
 import { Player } from '../models/player';
+import { players } from '../models/players';
 
 @Injectable({ providedIn: 'root' })
 export class PlayerStateService {
+  public players$: Observable<Player[]>;
   private state$ = new BehaviorSubject<Player[]>(undefined);
+
+  public constructor() {
+    this.players$ = this.state$.asObservable();
+
+    this.state$.next(
+      players.map((p) => {
+        return new Player(p.id, p.name);
+      })
+    );
+
+    this.state$.subscribe((x) => console.log(x));
+  }
 
   public getPlayers(): Player[] {
     return this.state$.value;
@@ -16,12 +30,19 @@ export class PlayerStateService {
     player.setActive(active);
   }
 
-  public assignScore(playerId: number, songId: string, level: Level): void {
-    const player = this.findPlayer(playerId);
-    player.setScore(songId, level);
+  public assignScore(playerId: number, score: Score): void {
+    const whatever = [...this.state$.value];
+    const player = whatever.find((x) => x.id === playerId);
+    player.setScore(score);
+
+    this.state$.next(whatever);
   }
 
   private findPlayer(id: number): Player {
     return this.state$.value.find((x) => x.id === id);
+  }
+
+  private others(id: number): Player[] {
+    return this.state$.value.filter((x) => x.id !== id);
   }
 }
