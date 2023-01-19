@@ -1,11 +1,12 @@
 - links page
-  - card component
-    - song name
-    - cover link
-    - original link
+  - done. needs testing
+  - song name
+  - cover link
+  - original link
 - routing tabs on
   - component done. needs hookinng up + testing
   - list
   - scoring
   - links
   - routes: scoring, links, game
+- fix up answer component
