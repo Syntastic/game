@@ -1,4 +1,8 @@
+@import "~styles";
+
 :host {
+  @include no-select;
+
   display: flex;
   flex-direction: column;
   font-size: 16pt;
