@@ -1,5 +1,8 @@
-<app-grid
-  [players]="rows$ | async"
-  [showScores]="true"
-  (scoreChanged)="onScoreChanged($event)"
-></app-grid>
+<div class="container">
+  <app-grid
+    [players]="rows$ | async"
+    [showScores]="true"
+    (scoreChanged)="onScoreChanged($event)"
+  ></app-grid>
+  <div class="export" (click)="onExportClick()">Export</div>
+</div>

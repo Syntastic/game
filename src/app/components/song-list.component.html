@@ -1,7 +1,11 @@
-<div
-  class="song"
-  *ngFor="let song of songs"
-  [routerLink]="['..', 'song', song.id]"
->
-  #{{ song.id }} - {{ song.year }}
-</div>
+<app-shell>
+  <div class="container">
+    <div
+      class="song"
+      *ngFor="let song of songs"
+      [routerLink]="['..', 'song', song.id]"
+    >
+      #{{ song.id }} - {{ song.year }}
+    </div>
+  </div>
+</app-shell>

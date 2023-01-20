@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
-import { map } from 'rxjs';
+import { map, take } from 'rxjs';
+import { saveAs } from 'file-saver';
+
 import { Score } from '../models';
 import { PlayerStateService } from '../services';
 
@@ -17,5 +19,18 @@ export class ScoringPageComponent {
 
   public onScoreChanged(e: [number, Score]): void {
     this.playerStateService.assignScore(e[0], e[1]);
+  }
+
+  public onExportClick(): void {
+    this.playerStateService.players$
+      .pipe(
+        take(1),
+        map((data) => {
+          return new File([JSON.stringify(data, null, 2)], 'data.json');
+        })
+      )
+      .subscribe((x) => {
+        saveAs(x);
+      });
   }
 }
