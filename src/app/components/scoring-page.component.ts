@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { map, take } from 'rxjs';
 import { saveAs } from 'file-saver';
 
@@ -21,7 +21,9 @@ export class ScoringPageComponent {
     this.playerStateService.assignScore(e[0], e[1]);
   }
 
+  @HostListener('document:keydown.shift.s')
   public onExportClick(): void {
+    console.log('?');
     this.playerStateService.players$
       .pipe(
         take(1),
