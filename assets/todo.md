@@ -1,0 +1,14 @@
+- links page
+  - done. needs testing
+  - song name
+  - cover link
+  - original link
+- routing tabs on
+  - component done. needs hookinng up + testing
+  - list
+  - scoring
+  - links
+  - routes: scoring, links, game
+- fix up answer component
+- test / apply no select
+- review commits made today
