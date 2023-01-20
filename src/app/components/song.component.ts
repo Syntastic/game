@@ -69,7 +69,7 @@ export class SongComponent implements OnInit {
     this.songId$.pipe(take(1)).subscribe((id) => {
       const i = parseInt(id);
       if (i === this.songProvider.songList.length) {
-        this.router.navigate(['scoring']);
+        this.router.navigate(['links']);
       } else {
         this.router.navigate(['..', i + 1], {
           relativeTo: this.route,

@@ -10,8 +10,8 @@ export class RoutingTabsComponent {
   public tabs: Tab[] = [
     { route: 'game', display: 'Start' },
     { route: 'list', display: 'Song List' },
-    // { route: 'scoring', display: 'Score Sheet' },
     { route: 'links', display: 'Links' },
+    { route: 'scoring', display: 'Score Sheet' },
   ];
 
   public constructor(private router: Router) {}
