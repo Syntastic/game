@@ -1,5 +1,19 @@
 :host {
-  width: 100px;
+  height: 100px;
   display: flex;
-  flex-direction: column;
+  font-size: 16pt;
+}
+
+.tab {
+  width: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-right: 1px solid #ccc;
+  height: 60%;
+}
+
+.tab:hover {
+  cursor: pointer;
+  font-size: 17pt;
 }

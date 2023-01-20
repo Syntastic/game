@@ -11,3 +11,4 @@ export { CheckboxComponent } from './checkbox.component';
 export { PlayerRowComponent } from './player-row.component';
 export { RoutingTabsComponent } from './routing.tabs.component';
 export { LinksComponent } from './links.component';
+export { ShellComponent } from './shell.component';

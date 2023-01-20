@@ -22,6 +22,7 @@ import * as components from './components';
     components.PlayerRowComponent,
     components.RoutingTabsComponent,
     components.LinksComponent,
+    components.ShellComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, AgGridModule],
   providers: [],

@@ -1,12 +1,18 @@
-<div class="headers row">
-  <div [style.width.px]="colDef.width" *ngFor="let colDef of colDefs">
-    {{colDef.headerName}}
+<div class="scroll-container">
+  <div class="headers row">
+    <div
+      class="header"
+      [style.width.px]="colDef.width"
+      *ngFor="let colDef of colDefs"
+    >
+      {{colDef.headerName}}
+    </div>
   </div>
+  <app-player-row
+    *ngFor="let player of players"
+    [player]="player"
+    [showActive]="showActive"
+    [showScores]="showScores"
+    (scoreChanged)="scoreChanged.emit($event)"
+  ></app-player-row>
 </div>
-<app-player-row
-  *ngFor="let player of players"
-  [player]="player"
-  [showActive]="showActive"
-  [showScores]="showScores"
-  (scoreChanged)="scoreChanged.emit($event)"
-></app-player-row>

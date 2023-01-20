@@ -1,0 +1,18 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.content {
+  flex: 1;
+  overflow: hidden;
+}
+
+.footer {
+  flex-shrink: 0;
+  margin-top: auto;
+  min-height: 50px;
+}

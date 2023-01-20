@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="content">
+    <ng-content></ng-content>
+  </div>
+  <div
+    class="footer"
+    (mouseenter)="showFooter = true"
+    (mouseleave)="showFooter = false"
+  >
+    <app-routing-tabs *ngIf="showFooter"></app-routing-tabs>
+  </div>
+</div>

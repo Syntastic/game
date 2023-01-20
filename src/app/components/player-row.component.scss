@@ -7,14 +7,17 @@
 
 .name {
   // padding-left: 2px;
+  flex-shrink: 0;
   width: 100px;
 }
 
 app-score-editor {
   width: 150px;
+  flex-shrink: 0;
 }
 
 .total {
   width: 100px;
   font-size: 24pt;
+  flex-shrink: 0;
 }

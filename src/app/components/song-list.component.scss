@@ -1,4 +1,4 @@
-@import "~styles";
+@import "/src/styles";
 
 :host {
   display: flex;
@@ -10,8 +10,6 @@
 }
 
 .song {
-  @include no-select;
-
   font-size: 48pt;
   border: 3px solid #cccccc;
   padding: 10px 0;

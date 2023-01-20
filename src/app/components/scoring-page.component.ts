@@ -10,7 +10,7 @@ import { PlayerStateService } from '../services';
 })
 export class ScoringPageComponent {
   public rows$ = this.playerStateService.players$.pipe(
-    map((players) => players.sort((a, b) => a.totalScore - b.totalScore))
+    map((players) => players.sort((a, b) => b.totalScore - a.totalScore))
   );
 
   public constructor(private playerStateService: PlayerStateService) {}
