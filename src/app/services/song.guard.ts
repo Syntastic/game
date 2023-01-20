@@ -7,5 +7,6 @@ export class SongGuard implements CanActivate {
 
   public canActivate(): boolean | UrlTree {
     return this.router.url === '/' ? this.router.parseUrl('game') : true;
+    // return true;
   }
 }

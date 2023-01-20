@@ -1,10 +1,10 @@
 <div class="container" (click)="onClick()">
-  <ng-container *ngIf="show1">
+  <ng-container *ngIf="clicks >= 1">
     <div class="name">{{ name }}</div>
     <div class="by">by</div>
     <div class="artist">{{ artist }}</div>
   </ng-container>
-  <ng-container>
+  <ng-container *ngIf="clicks >= 2">
     <div class="by">covered by</div>
     <div class="artist" (click)="ready.emit()">{{ coverArtist }}</div>
   </ng-container>

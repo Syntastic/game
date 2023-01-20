@@ -38,6 +38,7 @@ export class SongComponent implements OnInit {
       .subscribe((x) => {
         this.song = x;
         this.resetSong();
+        this.next = false;
       });
 
     this.song$ = this.songId$.pipe(map((x) => this.songProvider.getSong(x)));
